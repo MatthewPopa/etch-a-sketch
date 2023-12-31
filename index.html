@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Etch-a-Sketch</title>
+<link rel="stylesheet" href="style.css">
+<script src="app.js"></script>
+</head>
+<body>
+<div class="container">
+    <header><h1>Etch-a-Sketch</h1></header>
+    <div class="menu">
+        <div class="input-menu">
+            <label for="width">WIDTH</label>
+            <input value="16" max="100" min="8" id="width" type="number">
+        </div>
+        <div class="input-menu">
+            <label for="height">HEIGHT</label>
+            <input value="16" max="100" min="8" id="height" type="number">
+        </div>
+        <div class="input-menu">
+            <label for="color-picker">COLOR</label>
+            <input value="#346CFC" id="color-picker" type="color">
+        </div>
+    </div>
+    <button id="submit"><span>NEW CANVAS</span></button>
+    <div class="color-menu"></div>
+    <div class="canvas"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+    --background: #161616;
+    --secondary: #4E4E4E;
+    --tertiary: #2D2D2D;
+    --white: #F4F4F4;
+    --blue: #346CFC;
+    --red: #F8312F;
+}
+
+* {
+    box-sizing: border-box;
+    user-select: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    cursor: default;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background);
+    color: var(--white);
+}
+
+.container {
+    height: 50%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    text-align: center;
+}
+
+.color-menu {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+}
+
+.color {
+    background-color: var(--white);
+    min-height: 2rem;
+    cursor: pointer;
+}
+
+.color.current {
+    box-shadow:
+    0 0 0 1px var(--background),
+    0 0 0 2px var(--white);
+    z-index: 1;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.input-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: .8em;
+}
+
+input {
+    flex: 1 1;
+    background-color: transparent;
+    border: 2px solid var(--white);
+    color: var(--white);
+    padding: 4px;
+    margin: 2px;
+    font-weight: bold;
+}
+
+input[type=color] {
+    flex: unset;
+}
+
+button {
+    font-weight: bold;
+    background-color: var(--blue);
+    border: none;
+    color: var(--white);
+    mix-blend-mode: plus-lighter;
+    padding: 4px 12px;
+    cursor: pointer;
+    transition: .15s;
+    margin: .25rem 0;
+    border: 2px solid var(--white);
+}
+
+button:hover {
+    filter:brightness(1.2);
+}
+
+button:active {
+    filter:brightness(.8);
+}
+
+.canvas {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    border: 2px solid var(--background);
+    outline-style: solid;
+    outline-color: var(--secondary);
+    outline-offset: 1px;
+    outline-width: 2px;
+    gap: 1px;
+    margin-top: .5em;
+}
+
+.square {
+    background-color: var(--white);
+    aspect-ratio: 1/1;
+    transition: background-color .1s;
+}
+
+.square.fill {
+    background-color: var(--blue);
+}
