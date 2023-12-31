@@ -27,13 +27,14 @@ body {
     justify-content: center;
     background-color: var(--background);
     color: var(--white);
+    height: 100dvh;
 }
 
 .container {
-    height: 50%;
-    width: 50%;
+    width: min(90%, 600px);
     display: flex;
     flex-direction: column;
+    align-content: center;
 }
 
 header {
